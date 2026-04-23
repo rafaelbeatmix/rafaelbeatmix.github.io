@@ -1,0 +1,112 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.1;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.label {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links ul, .location p {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px;
+}
+
+.headline {
+    font-size: clamp(2.5rem, 6vw, 5rem); /* Ukuran font adaptif */
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+}
+
+/* Services Bar (The White Bar) */
+.services-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #fff;
+    color: #000;
+    width: calc(100% + 120px); /* Melebihi container sedikit agar penuh ke samping */
+    margin-left: -60px;
+    padding: 15px 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-top: 1px solid #000;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-item:first-child { text-align: left; }
+.service-item:last-child { text-align: right; }
+
+/* Giant Text Branding */
+.brand-name {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.giant-text {
+    font-size: clamp(5rem, 20vw, 25rem); /* Super besar */
+    font-weight: 900;
+    letter-spacing: -10px;
+    line-height: 0.8;
+    text-transform: uppercase;
+}
+
+.giant-text span {
+    font-size: 0.2em; /* Mengecilkan simbol TM */
+    vertical-align: top;
+    letter-spacing: 0;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .hero { padding: 20px; }
+    .services-bar {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding: 10px 20px;
+        font-size: 0.6rem;
+    }
+    .giant-text { letter-spacing: -3px; }
+}
